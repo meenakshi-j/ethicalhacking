@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "Enter the number of natural numbers to print:"
+read n
+
+echo "The first $n natural numbers are:"
+for (( i=1; i<=n; i++ ))
+do
+  echo "$i"
+done
