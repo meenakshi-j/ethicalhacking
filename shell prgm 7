@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Prompt the user to enter a string
+read -p "Enter a string: " input_string
+
+# Remove spaces and convert to lowercase for case-insensitive comparison
+cleaned_string=$(echo "$input_string" | tr -d ' ' | tr '[:upper:]' '[:lower:]')
+
+# Reverse the cleaned string
+reversed_string=$(echo "$cleaned_string" | rev)
+
+# Compare the cleaned string with its reversed version
+if [[ "$cleaned_string" == "$reversed_string" ]]; then
+  echo "\"$input_string\" is a palindrome."
+else
+  echo "\"$input_string\" is not a palindrome."
+fi
